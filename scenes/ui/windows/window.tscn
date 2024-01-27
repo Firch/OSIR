@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bjfo1x0lhgo1f"]
 
-[ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default_focused.tres" id="1_0n7l7"]
+[ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default.tres" id="1_ijh20"]
 [ext_resource type="Script" path="res://scenes/ui/windows/window.gd" id="2_i3jtd"]
 [ext_resource type="Texture2D" uid="uid://c20db7ih7bvla" path="res://sprites/ui/windows/default_button_close.png" id="3_yfow1"]
 [ext_resource type="Texture2D" uid="uid://pf6uuty2aao6" path="res://sprites/ui/windows/default_button_close_pressed.png" id="4_8g5h3"]
@@ -29,11 +29,12 @@ animations = [{
 [sub_resource type="LabelSettings" id="LabelSettings_8ihjk"]
 font = ExtResource("5_r1j0e")
 
-[node name="Window" type="Panel"]
+[node name="Window" type="Panel" groups=["Windows"]]
 offset_right = 112.0
 offset_bottom = 112.0
+focus_mode = 2
 mouse_filter = 2
-theme = ExtResource("1_0n7l7")
+theme = ExtResource("1_ijh20")
 script = ExtResource("2_i3jtd")
 
 [node name="DragBorderMargins" type="MarginContainer" parent="."]
@@ -49,7 +50,7 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 22
 theme_override_constants/margin_bottom = 0
 
-[node name="DragBorder" type="Button" parent="DragBorderMargins"]
+[node name="DragBorder" type="Button" parent="DragBorderMargins" groups=["Clickables"]]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
@@ -64,7 +65,7 @@ offset_right = -5.0
 offset_bottom = 21.0
 grow_horizontal = 0
 
-[node name="CloseButton" type="Button" parent="CloseButtonMargins"]
+[node name="CloseButton" type="Button" parent="CloseButtonMargins" groups=["Clickables"]]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 

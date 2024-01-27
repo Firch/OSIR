@@ -1,10 +1,10 @@
+MarginContainer
+Button
 TextureRect
 Sprite2D
 CenterContainer
 Label
 AnimatedSprite2D
-Button
-MarginContainer
 Container
 Panel
 Control
@@ -12,4 +12,3 @@ GridContainer
 AspectRatioContainer
 ReferenceRect
 CollisionShape2D
-Area2D
