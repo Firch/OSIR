@@ -9,3 +9,4 @@ res://scenes/ui/windows/windowholder.tscn
 res://scenes/ui/windows/windowholder.gd
 res://sprites/ui/windows/default_style.tres
 res://scenes/ui/windows/window.gd
+res://sprites/ui/windows/default_focused.tres

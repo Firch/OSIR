@@ -1,4 +1,11 @@
-extends PanelContainer
+extends Panel
+
+@export var Text: String
+
+@onready var Title = $Title
+@onready var DragBorder = $DragBorderMargins/DragBorder
+@onready var CloseButton = $CloseButtonMargins/CloseButton
+@onready var CloseButtonSprite = $CloseButtonMargins/CloseButton/CloseButtonSprite
 
 var focused: bool = true # Is it in focus?
 var mouseover: bool = false # Is the mouse over the window's dragborder?
@@ -7,27 +14,58 @@ var moving: bool = false # Does it move currently?
 
 
 func _ready():
-	$DragBorder.mouse_entered.connect(_on_mouse_enter)
-	$DragBorder.mouse_exited.connect(_on_mouse_exit)
+	# Title:
+	if Title.text != null:
+		Title.text = Text
+	# Connects:
+	DragBorder.button_down.connect(_on_start_drag)
+	DragBorder.button_up.connect(_on_end_drag)
+	focus_entered.connect(_on_focus)
+	focus_exited.connect(_on_unfocus)
+	CloseButton.button_down.connect(_on_closebutton_down)
+	CloseButton.button_up.connect(_on_closebutton_up)
+	CloseButton.pressed.connect(_on_close)
 
 
-func _on_mouse_enter():
-	print("Mouse entered object " + name)
-	mouseover = true
+func _on_start_drag():
+	if moveable:
+		moving = true
+		move_to_front()
 
 
-func _on_mouse_exit():
-	print("Mouse exited object " + name)
-	if moving == false: # There's gonna be delay, we don't want to lose window accidentially when dragging
-		mouseover = false
+func _on_end_drag():
+	if moveable:
+		moving = false
 
 
-func _process(delta):
-	if mouseover and Input.is_action_just_pressed("mouse_left"):
-		moving = true;
-	if mouseover and Input.is_action_just_released("mouse_left"):
-		moving = false;
+func _on_focus():
+	focus()
 
+
+func _on_unfocus():
+	unfocus()
+
+
+func _on_closebutton_down():
+	CloseButtonSprite.animation = "pressed"
+	focus()
+
+
+func _on_closebutton_up():
+	CloseButtonSprite.animation = "default"
+
+
+func _on_close():
+	queue_free()
+
+
+func focus():
+	focused = true
+	move_to_front()
+
+
+func unfocus():
+	focused = false
 
 func _input(event):
 	if event is InputEventMouseMotion and moving == true:

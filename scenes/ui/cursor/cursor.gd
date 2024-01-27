@@ -8,7 +8,6 @@ var sens: float = normalsens
 var opacity: float = 1
 var stopped: bool = false
 
-
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	gravity_scale = 0

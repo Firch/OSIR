@@ -22,8 +22,23 @@ sprite_frames = SubResource("SpriteFrames_2qrpf")
 animation = &"placeholder"
 autoplay = "placeholder"
 
+[node name="Window3" parent="." instance=ExtResource("2_qelma")]
+offset_left = 120.0
+offset_top = 237.0
+offset_right = 233.0
+offset_bottom = 429.0
+Text = "problem?"
+
+[node name="Window2" parent="." instance=ExtResource("2_qelma")]
+offset_left = 32.0
+offset_top = 54.0
+offset_right = 236.0
+offset_bottom = 203.0
+Text = "Trolololo"
+
 [node name="Window" parent="." instance=ExtResource("2_qelma")]
 offset_left = 275.0
 offset_top = 218.0
-offset_right = 355.0
-offset_bottom = 282.0
+offset_right = 461.0
+offset_bottom = 319.0
+Text = "GET DUNKED ON"
