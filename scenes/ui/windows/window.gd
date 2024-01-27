@@ -1,15 +1,14 @@
 extends PanelContainer
 
 var focused: bool = true # Is it in focus?
-var mouseover: bool = false # Is the
-var moveable: bool = true
-var moving: bool = false
+var mouseover: bool = false # Is the mouse over the window's dragborder?
+var moveable: bool = true # Can it be moved?
+var moving: bool = false # Does it move currently?
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	$Area2D.mouse_entered.connect(_on_mouse_enter)
-	$Area2D.mouse_exited.connect(_on_mouse_exit)
+	$DragBorder.mouse_entered.connect(_on_mouse_enter)
+	$DragBorder.mouse_exited.connect(_on_mouse_exit)
 
 
 func _on_mouse_enter():
@@ -31,5 +30,5 @@ func _process(delta):
 
 
 func _input(event):
-	if event is InputEventMouse and moving == true:
-		position = event.position
+	if event is InputEventMouseMotion and moving == true:
+		position += event.relative / 2
