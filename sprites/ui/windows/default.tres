@@ -1,0 +1,50 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://cnj16e05wr6kl"]
+
+[ext_resource type="StyleBox" uid="uid://l7j7pnqqvvrl" path="res://sprites/ui/windows/default_style.tres" id="1_exads"]
+[ext_resource type="FontFile" uid="uid://dnsuuvjw0wonm" path="res://fonts/gamefonts.ttf" id="2_d22gk"]
+[ext_resource type="Texture2D" uid="uid://cpd1gb2c0pv6k" path="res://sprites/ui/windows/default_focused.png" id="2_f0bms"]
+[ext_resource type="Texture2D" uid="uid://c20db7ih7bvla" path="res://sprites/ui/windows/default_button_close.png" id="2_v5jrt"]
+[ext_resource type="Texture2D" uid="uid://pf6uuty2aao6" path="res://sprites/ui/windows/default_button_close_pressed.png" id="3_p6a3b"]
+[ext_resource type="Texture2D" uid="uid://yxwcng0npa5v" path="res://sprites/ui/windows/default_unfocused.png" id="5_mlird"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20oqj"]
+texture = ExtResource("2_f0bms")
+texture_margin_left = 6.0
+texture_margin_top = 42.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+expand_margin_left = 6.0
+expand_margin_top = 42.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 128, 128)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d3tn0"]
+texture = ExtResource("5_mlird")
+texture_margin_left = 6.0
+texture_margin_top = 42.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+expand_margin_left = 6.0
+expand_margin_top = 42.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 128, 128)
+
+[resource]
+default_font = ExtResource("2_d22gk")
+Panel/styles/panel = ExtResource("1_exads")
+PanelContainer/styles/panel = ExtResource("1_exads")
+Window/colors/title_color = Color(0.875, 0.875, 0.875, 1)
+Window/colors/title_outline_modulate = Color(1, 1, 1, 1)
+Window/constants/close_h_offset = 36
+Window/constants/close_v_offset = 34
+Window/constants/resize_margin = 4
+Window/constants/title_height = 36
+Window/constants/title_outline_size = 0
+Window/font_sizes/title_font_size = 32
+Window/fonts/title_font = ExtResource("2_d22gk")
+Window/icons/close = ExtResource("2_v5jrt")
+Window/icons/close_pressed = ExtResource("3_p6a3b")
+Window/styles/embedded_border = SubResource("StyleBoxTexture_20oqj")
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxTexture_d3tn0")

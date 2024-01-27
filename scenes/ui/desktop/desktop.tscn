@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp1xs8cm2stub"]
+
+[ext_resource type="Texture2D" uid="uid://dxtem8ex4sldn" path="res://sprites/ui/wallpaper/placeholder.png" id="1_ophm4"]
+[ext_resource type="PackedScene" uid="uid://bjfo1x0lhgo1f" path="res://scenes/ui/windows/window.tscn" id="2_qelma"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2qrpf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ophm4")
+}],
+"loop": true,
+"name": &"placeholder",
+"speed": 5.0
+}]
+
+[node name="Desktop" type="Node2D"]
+
+[node name="Wallpaper" type="AnimatedSprite2D" parent="."]
+position = Vector2(480, 270)
+sprite_frames = SubResource("SpriteFrames_2qrpf")
+animation = &"placeholder"
+autoplay = "placeholder"
+
+[node name="Window" parent="." instance=ExtResource("2_qelma")]
+offset_left = 275.0
+offset_top = 218.0
+offset_right = 355.0
+offset_bottom = 282.0
