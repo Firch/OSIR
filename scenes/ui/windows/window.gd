@@ -31,7 +31,7 @@ var opening: bool = true # Is currently opening? That's for animations
 var closing: bool = false # Is currently closing? That's for animations
 var minimizing: bool = false # Is currently minimizing? That's for animations
 
-var minimized: bool = false # Is currently in MINIMIZED state?
+var minimized: bool = false # Is currently inchang MINIMIZED state?
 
 func _ready():
 	# Title:
@@ -92,7 +92,7 @@ func _ready():
 func appeared(): # Called when OpeningTimer ended. That means appearing transition is ended.
 	opening = false
 	modulate.a = 1
-	print("Window '" + name + "' Opened!")
+	print("Window '" + name + "' opened!")
 
 
 func disappeared(): # Called when ClosingTimer ended. That means disappearing transition is ended.
@@ -102,7 +102,7 @@ func disappeared(): # Called when ClosingTimer ended. That means disappearing tr
 		modulate.a = 0
 		minimizing = false;
 		minimized = true;
-		print("Window '" + name + "' Minimized!")
+		print("Window '" + name + "' minimized!")
 
 
 func _process(delta):
@@ -220,6 +220,11 @@ func disable(): # Disables window's functionality.
 			clickable.focus_entered.disconnect(focus)
 			clickable.focus_exited.disconnect(unfocus)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+
+func changefont(font: FontFile):
+	Title.label_settings.set_font(font)
+	print("Applied '" + str(font) + "' font to window '" + name + "'!")
 
 
 func playsound(sound: String):

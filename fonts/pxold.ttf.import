@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://nwd1r36peo61"
-path="res://.godot/imported/sandyforest.ttf-4bfc79ceffd0833a54d3a6b6bf4250c8.fontdata"
+uid="uid://dd7lfl28kq24n"
+path="res://.godot/imported/pxold.ttf-191a964e75fd4bc8a38c837e658a8eeb.fontdata"
 
 [deps]
 
-source_file="res://fonts/sandyforest.ttf"
-dest_files=["res://.godot/imported/sandyforest.ttf-4bfc79ceffd0833a54d3a6b6bf4250c8.fontdata"]
+source_file="res://fonts/pxold.ttf"
+dest_files=["res://.godot/imported/pxold.ttf-191a964e75fd4bc8a38c837e658a8eeb.fontdata"]
 
 [params]
 
@@ -21,18 +21,13 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=1
-subpixel_positioning=0
+subpixel_positioning=1
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

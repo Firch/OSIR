@@ -4,4 +4,3 @@ res://sprites/ui/windows/default.tres
 res://scenes/ui/windows/window.gdshader
 res://scenes/ui/desktop/desktop.tscn
 res://scenes/ui/windows/window.tscn
-res://scenes/ui/windows/window.gd

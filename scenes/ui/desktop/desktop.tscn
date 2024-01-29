@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cp1xs8cm2stub"]
+[gd_scene load_steps=6 format=3 uid="uid://cp1xs8cm2stub"]
 
-[ext_resource type="Texture2D" uid="uid://dxtem8ex4sldn" path="res://sprites/ui/wallpaper/placeholder.png" id="1_ophm4"]
+[ext_resource type="Texture2D" uid="uid://dxtem8ex4sldn" path="res://sprites/ui/wallpaper/placeholder1.png" id="1_j04yc"]
+[ext_resource type="Texture2D" uid="uid://detxfkh8h3qu4" path="res://sprites/ui/wallpaper/placeholder2.png" id="2_dod0f"]
 [ext_resource type="PackedScene" uid="uid://bjfo1x0lhgo1f" path="res://scenes/ui/windows/window.tscn" id="2_qelma"]
 [ext_resource type="Texture2D" uid="uid://jkvq4wdt0106" path="res://sprites/ui/icons/placeholder.png" id="3_m6l02"]
 
@@ -8,10 +9,18 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ophm4")
+"texture": ExtResource("1_j04yc")
 }],
 "loop": true,
-"name": &"placeholder",
+"name": &"placeholder1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dod0f")
+}],
+"loop": true,
+"name": &"placeholder2",
 "speed": 5.0
 }]
 
@@ -20,8 +29,8 @@ animations = [{
 [node name="Wallpaper" type="AnimatedSprite2D" parent="."]
 position = Vector2(480, 270)
 sprite_frames = SubResource("SpriteFrames_2qrpf")
-animation = &"placeholder"
-autoplay = "placeholder"
+animation = &"placeholder2"
+autoplay = "placeholder2"
 
 [node name="Button" type="Button" parent="Wallpaper"]
 modulate = Color(1, 1, 1, 0)
