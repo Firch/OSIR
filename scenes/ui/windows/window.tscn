@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjfo1x0lhgo1f"]
+[gd_scene load_steps=12 format=3 uid="uid://bjfo1x0lhgo1f"]
 
 [ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default.tres" id="1_ijh20"]
 [ext_resource type="Script" path="res://scenes/ui/windows/window.gd" id="2_i3jtd"]
 [ext_resource type="Texture2D" uid="uid://c20db7ih7bvla" path="res://sprites/ui/windows/default_button_close.png" id="3_yfow1"]
 [ext_resource type="Texture2D" uid="uid://pf6uuty2aao6" path="res://sprites/ui/windows/default_button_close_pressed.png" id="4_8g5h3"]
+[ext_resource type="Texture2D" uid="uid://cmitx43vybwqn" path="res://sprites/ui/windows/default_button_minimize.png" id="5_gq67s"]
 [ext_resource type="FontFile" uid="uid://dnsuuvjw0wonm" path="res://fonts/gamefonts.ttf" id="5_r1j0e"]
+[ext_resource type="Texture2D" uid="uid://cjugwt8pqcw5a" path="res://sprites/ui/windows/default_button_minimize_pressed.png" id="6_aqxnf"]
 [ext_resource type="Texture2D" uid="uid://ca1x8cdtbeyma" path="res://sprites/ui/windows/image_placeholder.png" id="6_dp7dp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ipgh"]
@@ -26,6 +28,25 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_d88v4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_gq67s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_aqxnf")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 5.0
+}]
+
 [sub_resource type="LabelSettings" id="LabelSettings_8ihjk"]
 font = ExtResource("5_r1j0e")
 
@@ -38,6 +59,7 @@ theme = ExtResource("1_ijh20")
 script = ExtResource("2_i3jtd")
 
 [node name="DragBorderMargins" type="MarginContainer" parent="."]
+use_parent_material = true
 layout_mode = 2
 anchor_right = 1.0
 offset_left = 3.0
@@ -52,38 +74,71 @@ theme_override_constants/margin_bottom = 0
 
 [node name="DragBorder" type="Button" parent="DragBorderMargins" groups=["Clickables"]]
 self_modulate = Color(1, 1, 1, 0)
+use_parent_material = true
 layout_mode = 2
 
 [node name="CloseButtonMargins" type="MarginContainer" parent="."]
+use_parent_material = true
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -23.0
 offset_top = 3.0
-offset_right = -5.0
+offset_right = -6.0
 offset_bottom = 21.0
 grow_horizontal = 0
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_bottom = 1
 
 [node name="CloseButton" type="Button" parent="CloseButtonMargins" groups=["Clickables"]]
 self_modulate = Color(1, 1, 1, 0)
+use_parent_material = true
 layout_mode = 2
 
 [node name="CloseButtonSprite" type="AnimatedSprite2D" parent="CloseButtonMargins/CloseButton"]
-position = Vector2(9, 9)
+use_parent_material = true
+position = Vector2(9, 8)
 sprite_frames = SubResource("SpriteFrames_4ipgh")
 autoplay = "default"
 
+[node name="MinimizeButtonMargins" type="MarginContainer" parent="."]
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -39.0
+offset_top = 3.0
+offset_right = -22.0
+offset_bottom = 21.0
+grow_horizontal = 0
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="MinimizeButton" type="Button" parent="MinimizeButtonMargins" groups=["Clickables"]]
+self_modulate = Color(1, 1, 1, 0)
+use_parent_material = true
+layout_mode = 2
+
+[node name="MinimizeButtonSprite" type="AnimatedSprite2D" parent="MinimizeButtonMargins/MinimizeButton"]
+use_parent_material = true
+position = Vector2(9, 8)
+sprite_frames = SubResource("SpriteFrames_d88v4")
+autoplay = "default"
+
 [node name="Title" type="Label" parent="."]
+use_parent_material = true
 layout_mode = 0
-offset_left = 5.0
-offset_top = 6.0
-offset_right = 45.0
-offset_bottom = 17.0
+offset_left = 25.0
+offset_top = 5.0
+offset_right = 65.0
+offset_bottom = 16.0
 text = "ERROR"
 label_settings = SubResource("LabelSettings_8ihjk")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+use_parent_material = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -91,5 +146,24 @@ anchor_bottom = 1.0
 offset_top = 21.0
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+use_parent_material = true
 layout_mode = 2
 texture = ExtResource("6_dp7dp")
+
+[node name="AppearingTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="DisappearingTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 22.0
+offset_bottom = 20.0

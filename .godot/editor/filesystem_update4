@@ -1,8 +1,7 @@
-res://scenes/ui/windows/window.tscn
-res://sprites/ui/windows/default_style.tres
-res://sprites/ui/windows/default_focused.tres
-res://scenes/ui/windows/window.gd
 res://scenes/main/main.tscn
-res://scenes/ui/desktop/desktop.tscn
+res://sprites/ui/windows/default_style.tres
 res://sprites/ui/windows/default.tres
-res://sprites/ui/windows/default_style_unfocused.tres
+res://scenes/ui/windows/window.gdshader
+res://scenes/ui/desktop/desktop.tscn
+res://scenes/ui/windows/window.tscn
+res://scenes/ui/windows/window.gd
