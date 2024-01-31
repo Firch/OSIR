@@ -1,3 +1,4 @@
+VisualShader
 FontFile
 Theme
 StyleBoxTexture

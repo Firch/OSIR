@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dxtem8ex4sldn" path="res://sprites/ui/wallpaper/placeholder1.png" id="1_j04yc"]
 [ext_resource type="Texture2D" uid="uid://detxfkh8h3qu4" path="res://sprites/ui/wallpaper/placeholder2.png" id="2_dod0f"]
 [ext_resource type="PackedScene" uid="uid://bjfo1x0lhgo1f" path="res://scenes/ui/windows/window.tscn" id="2_qelma"]
-[ext_resource type="Texture2D" uid="uid://jkvq4wdt0106" path="res://sprites/ui/icons/placeholder.png" id="3_m6l02"]
+[ext_resource type="Texture2D" uid="uid://behmo6osfl1hj" path="res://sprites/ui/icons/madhead.png" id="4_4q4le"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2qrpf"]
 animations = [{
@@ -52,14 +52,21 @@ offset_top = 218.0
 offset_right = 545.0
 offset_bottom = 332.0
 Text = "Sheya Refaka"
-IconImage = ExtResource("3_m6l02")
+IconImage = ExtResource("4_4q4le")
 
-[node name="Taskbar" type="Panel" parent="."]
+[node name="Taskbar" parent="." instance=ExtResource("2_qelma")]
 offset_top = 512.0
 offset_right = 960.0
 offset_bottom = 540.0
+theme_type_variation = &"Nonmoveable"
+Minimizeable = false
+Closeable = false
+Moveable = false
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Taskbar"]
+[node name="HBoxContainer" type="BoxContainer" parent="Taskbar"]
 layout_mode = 0
-offset_right = 960.0
-offset_bottom = 28.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 957.0
+offset_bottom = 25.0
+theme_override_constants/separation = 0

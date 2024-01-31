@@ -21,6 +21,11 @@ extends Panel
 
 @onready var Audio = $AudioStreamPlayer
 
+@onready var Taskbar = get_parent().get_node("Taskbar/HBoxContainer")
+@onready var TaskbarButton = preload("res://scenes/ui/desktop/taskbarbutton.tscn")
+@onready var ButtonInstance = TaskbarButton.instantiate()
+
+
 var focused: bool = false # Is it in focus?
 var mouseover: bool = false # Is the mouse over the window's dragborder?
 var moving: bool = false # Does it move currently?
@@ -87,6 +92,12 @@ func _ready():
 	# Unfocus:
 	if !focused:
 		unfocus()
+	
+	
+	# Taskbar:
+	if Moveable:
+		ButtonInstance.App = self
+		Taskbar.add_child(ButtonInstance)
 
 
 func appeared(): # Called when OpeningTimer ended. That means appearing transition is ended.
@@ -97,6 +108,7 @@ func appeared(): # Called when OpeningTimer ended. That means appearing transiti
 
 func disappeared(): # Called when ClosingTimer ended. That means disappearing transition is ended.
 	if closing == true:
+		print("Window '" + name + "' closed!")
 		queue_free()
 	if minimizing == true:
 		modulate.a = 0
@@ -118,9 +130,9 @@ func _process(delta):
 	
 	
 	# Debug open window
-	if Input.is_action_just_pressed("ui_accept"):
-		if minimized:
-			_on_maximize()
+	#if Input.is_action_just_pressed("ui_accept"):
+	#	if minimized:
+	#		_on_maximize()
 
 
 func _on_start_drag():
@@ -148,6 +160,7 @@ func _on_close(): # Called when close button is pressed, closing the window.
 	unfocus()
 	DisappearingTimer.start()
 	playsound("res://audio/sfx/ui/remove.wav")
+	ButtonInstance.queue_free()
 	disable()
 
 
@@ -165,6 +178,7 @@ func _on_minimize(): # Called when minimize button is pressed, minimizing the wi
 	minimizing = true
 	unfocus()
 	DisappearingTimer.start()
+	
 	playsound("res://audio/sfx/ui/remove.wav")
 	disable()
 
@@ -180,10 +194,15 @@ func _on_maximize():
 
 
 func focus():
-	focused = true
-	if Moveable:
-		set_theme_type_variation("Focused")
-	move_to_front()
+	if focused == false:
+		if Moveable:
+			set_theme_type_variation("Focused")
+		move_to_front()
+		
+		grab_focus()
+		focused = true
+		
+		print("Focus on window '" + name + "'!")
 
 
 func unfocus():
@@ -194,6 +213,9 @@ func unfocus():
 
 func enable(): # Reverts disable().
 	enabled = true
+	
+	set_z_index(0); # Ordering magic - used for disappearance animation
+	get_parent().move_child(self, get_parent().get_child_count())
 	
 	focus_entered.connect(focus)
 	focus_exited.connect(unfocus)
@@ -210,6 +232,9 @@ func enable(): # Reverts disable().
 func disable(): # Disables window's functionality.
 	enabled = false
 	
+	set_z_index(1); # Ordering magic - used for disappearance animation
+	get_parent().move_child(self, 0)
+	
 	focus_entered.disconnect(focus)
 	focus_exited.disconnect(unfocus)
 	
@@ -222,7 +247,7 @@ func disable(): # Disables window's functionality.
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 
-func changefont(font: FontFile):
+func change_font(font: FontFile):
 	Title.label_settings.set_font(font)
 	print("Applied '" + str(font) + "' font to window '" + name + "'!")
 
@@ -234,4 +259,4 @@ func playsound(sound: String):
 
 func _input(event):
 	if event is InputEventMouseMotion and moving == true:
-		position += event.relative / 2
+		position += event.relative / 2 # Dragging

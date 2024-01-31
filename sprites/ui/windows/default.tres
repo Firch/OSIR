@@ -1,9 +1,27 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://cnj16e05wr6kl"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://cnj16e05wr6kl"]
 
 [ext_resource type="StyleBox" uid="uid://l7j7pnqqvvrl" path="res://sprites/ui/windows/default_style.tres" id="1_oklqi"]
+[ext_resource type="Texture2D" uid="uid://dgoi7qvywesq8" path="res://sprites/ui/windows/default_button.png" id="1_uiv1n"]
 [ext_resource type="StyleBox" uid="uid://3gxmd2g7eiwa" path="res://sprites/ui/windows/default_style_unfocused.tres" id="2_8e4pg"]
 [ext_resource type="Texture2D" uid="uid://dfs1ggr6yeu7c" path="res://sprites/ui/windows/default.png" id="2_gn0yl"]
+[ext_resource type="Texture2D" uid="uid://1v64roykt20w" path="res://sprites/ui/windows/default_button_pressed.png" id="2_wkeve"]
 [ext_resource type="FontFile" uid="uid://dnsuuvjw0wonm" path="res://fonts/gamefonts.ttf" id="3_sh6vv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f1b54"]
+texture = ExtResource("1_uiv1n")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qfo1q"]
+texture = ExtResource("2_wkeve")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 64, 64)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8htl8"]
 texture = ExtResource("2_gn0yl")
@@ -15,6 +33,10 @@ region_rect = Rect2(0, 0, 64, 64)
 
 [resource]
 default_font = ExtResource("3_sh6vv")
+ButtonIdle/base_type = &"Panel"
+ButtonIdle/styles/panel = SubResource("StyleBoxTexture_f1b54")
+ButtonPressed/base_type = &"Panel"
+ButtonPressed/styles/panel = SubResource("StyleBoxTexture_qfo1q")
 Focused/base_type = &"Panel"
 Focused/styles/panel = ExtResource("1_oklqi")
 Nonmoveable/base_type = &"Panel"

@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bjfo1x0lhgo1f"]
+[gd_scene load_steps=14 format=3 uid="uid://bjfo1x0lhgo1f"]
 
 [ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default.tres" id="1_ijh20"]
+[ext_resource type="Shader" uid="uid://dv1h2x0crhvad" path="res://shaders/slowfuck.tres" id="1_yyekb"]
 [ext_resource type="Script" path="res://scenes/ui/windows/window.gd" id="2_i3jtd"]
 [ext_resource type="Texture2D" uid="uid://c20db7ih7bvla" path="res://sprites/ui/windows/default_button_close.png" id="3_yfow1"]
 [ext_resource type="Texture2D" uid="uid://pf6uuty2aao6" path="res://sprites/ui/windows/default_button_close_pressed.png" id="4_8g5h3"]
@@ -8,6 +9,9 @@
 [ext_resource type="FontFile" uid="uid://dnsuuvjw0wonm" path="res://fonts/gamefonts.ttf" id="5_r1j0e"]
 [ext_resource type="Texture2D" uid="uid://cjugwt8pqcw5a" path="res://sprites/ui/windows/default_button_minimize_pressed.png" id="6_aqxnf"]
 [ext_resource type="Texture2D" uid="uid://ca1x8cdtbeyma" path="res://sprites/ui/windows/image_placeholder.png" id="6_dp7dp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jp6mj"]
+shader = ExtResource("1_yyekb")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4ipgh"]
 animations = [{
@@ -51,6 +55,7 @@ animations = [{
 font = ExtResource("5_r1j0e")
 
 [node name="Window" type="Panel" groups=["Windows"]]
+material = SubResource("ShaderMaterial_jp6mj")
 offset_right = 112.0
 offset_bottom = 112.0
 focus_mode = 2
@@ -69,7 +74,7 @@ offset_bottom = 21.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 22
+theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 
 [node name="DragBorder" type="Button" parent="DragBorderMargins" groups=["Clickables"]]
@@ -134,10 +139,10 @@ offset_left = 25.0
 offset_top = 5.0
 offset_right = 65.0
 offset_bottom = 16.0
-text = "ERROR"
 label_settings = SubResource("LabelSettings_8ihjk")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+visible = false
 use_parent_material = true
 layout_mode = 1
 anchors_preset = -1
