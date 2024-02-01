@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpd1gb2c0pv6k"
-path="res://.godot/imported/default_focused.png-acbaddb6528d535f01eef37173653ccd.ctex"
+uid="uid://dgoi7qvywesq8"
+path="res://.godot/imported/button.png-744f76a50564ceeecdbf62da5327403d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui/windows/default_focused.png"
-dest_files=["res://.godot/imported/default_focused.png-acbaddb6528d535f01eef37173653ccd.ctex"]
+source_file="res://sprites/ui/windows/default/button.png"
+dest_files=["res://.godot/imported/button.png-744f76a50564ceeecdbf62da5327403d.ctex"]
 
 [params]
 

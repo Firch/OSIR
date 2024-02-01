@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2jdbmnxldgfh"]
 
-[ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default.tres" id="1_vxfda"]
+[ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default/default.tres" id="1_6n5ed"]
 [ext_resource type="Script" path="res://scenes/ui/desktop/taskbarbutton.gd" id="2_eeh7e"]
 
 [node name="TaskbarButton" type="Button" groups=["Clickables", "Description"]]
@@ -8,7 +8,7 @@ self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(22, 22)
 offset_right = 22.0
 offset_bottom = 22.0
-theme = ExtResource("1_vxfda")
+theme = ExtResource("1_6n5ed")
 theme_type_variation = &"Nonmoveable"
 script = ExtResource("2_eeh7e")
 
@@ -19,7 +19,7 @@ offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme = ExtResource("1_vxfda")
+theme = ExtResource("1_6n5ed")
 theme_type_variation = &"ButtonIdle"
 
 [node name="Icon" type="TextureRect" parent="ButtonSprite"]

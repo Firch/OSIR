@@ -194,12 +194,12 @@ func _on_maximize():
 
 
 func focus():
+	grab_focus()
 	if focused == false:
 		if Moveable:
 			set_theme_type_variation("Focused")
 		move_to_front()
 		
-		grab_focus()
 		focused = true
 		
 		print("Focus on window '" + name + "'!")

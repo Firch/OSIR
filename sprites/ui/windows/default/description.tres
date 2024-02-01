@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://d4h2o0xun6kik"]
+
+[ext_resource type="Texture2D" uid="uid://clbxyntwvh6vx" path="res://sprites/ui/windows/default/description.png" id="1_gvyom"]
+
+[resource]
+texture = ExtResource("1_gvyom")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 64, 64)

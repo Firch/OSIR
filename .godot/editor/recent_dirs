@@ -1,3 +1,5 @@
+res://sprites/ui/windows/default
+res://scenes/ui/cursor
 res://sprites/ui/windows
 res://scenes/ui/desktop
 res://sprites/ui/icons
@@ -7,5 +9,4 @@ res://scenes/ui/windows
 res://sprites/ui/cursor
 res://scenes/ui
 res://sprites/ui/wallpaper
-res://scenes/ui/cursor
 res://scenes/main

@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bl58u5cqj3r6y"]
+
+[ext_resource type="Texture2D" uid="uid://dfs1ggr6yeu7c" path="res://sprites/ui/windows/default/nonmoveable.png" id="1_nck63"]
+
+[resource]
+texture = ExtResource("1_nck63")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(0, 0, 64, 64)

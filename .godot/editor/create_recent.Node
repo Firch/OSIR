@@ -1,9 +1,9 @@
+Panel
 Button
 Control
 Container
 BoxContainer
 HBoxContainer
-Panel
 CollisionShape2D
 Area2D
 TextureRect

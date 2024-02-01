@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmitx43vybwqn"
-path="res://.godot/imported/default_button_minimize.png-121fb426b7a5414d1b84cb0b6a893512.ctex"
+uid="uid://dfs1ggr6yeu7c"
+path="res://.godot/imported/nonmoveable.png-a341bb72941a8f25bd6a4411138d9b74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui/windows/default_button_minimize.png"
-dest_files=["res://.godot/imported/default_button_minimize.png-121fb426b7a5414d1b84cb0b6a893512.ctex"]
+source_file="res://sprites/ui/windows/default/nonmoveable.png"
+dest_files=["res://.godot/imported/nonmoveable.png-a341bb72941a8f25bd6a4411138d9b74.ctex"]
 
 [params]
 

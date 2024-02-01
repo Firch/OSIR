@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cnj16e05wr6kl"]
+
+[ext_resource type="StyleBox" uid="uid://cxcveei0fmf25" path="res://sprites/ui/windows/default/button.tres" id="1_auvh8"]
+[ext_resource type="StyleBox" uid="uid://hru54ugyta4g" path="res://sprites/ui/windows/default/button_pressed.tres" id="2_utdp5"]
+[ext_resource type="StyleBox" uid="uid://l7j7pnqqvvrl" path="res://sprites/ui/windows/default/focused.tres" id="3_1m4sl"]
+[ext_resource type="StyleBox" uid="uid://d4h2o0xun6kik" path="res://sprites/ui/windows/default/description.tres" id="3_nj7fc"]
+[ext_resource type="StyleBox" uid="uid://bl58u5cqj3r6y" path="res://sprites/ui/windows/default/nonmoveable.tres" id="4_d4e2x"]
+[ext_resource type="StyleBox" uid="uid://3gxmd2g7eiwa" path="res://sprites/ui/windows/default/unfocused.tres" id="5_lfthm"]
+[ext_resource type="FontFile" uid="uid://dnsuuvjw0wonm" path="res://fonts/gamefonts.ttf" id="6_g41bc"]
+
+[resource]
+default_font = ExtResource("6_g41bc")
+ButtonIdle/base_type = &"Panel"
+ButtonIdle/styles/panel = ExtResource("1_auvh8")
+ButtonPressed/base_type = &"Panel"
+ButtonPressed/styles/panel = ExtResource("2_utdp5")
+Description/base_type = &"Panel"
+Description/styles/panel = ExtResource("3_nj7fc")
+Focused/base_type = &"Panel"
+Focused/styles/panel = ExtResource("3_1m4sl")
+Nonmoveable/base_type = &"Panel"
+Nonmoveable/styles/panel = ExtResource("4_d4e2x")
+Panel/styles/panel = ExtResource("3_1m4sl")
+Unfocused/base_type = &"Panel"
+Unfocused/styles/panel = ExtResource("5_lfthm")

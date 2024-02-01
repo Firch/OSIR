@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bst7augc6a6sk"]
+
+[node name="Description" type="Panel"]
+offset_right = 40.0
+offset_bottom = 40.0
