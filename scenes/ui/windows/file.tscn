@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfhu0ymhnxxdu"]
+
+[ext_resource type="Texture2D" uid="uid://tvlxeyomvmqk" path="res://sprites/ui/icons/madhead_big.png" id="1_p6tho"]
+
+[node name="File" type="Button"]
+anchors_preset = -1
+anchor_right = 0.329
+anchor_bottom = 0.547
+offset_right = -599.68
+offset_bottom = -558.76
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("1_p6tho")

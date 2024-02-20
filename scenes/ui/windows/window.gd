@@ -214,7 +214,7 @@ func unfocus():
 func enable(): # Reverts disable().
 	enabled = true
 	
-	set_z_index(0); # Ordering magic - used for disappearance animation
+	set_z_index(0) # Ordering magic - used for disappearance animation
 	get_parent().move_child(self, get_parent().get_child_count())
 	
 	focus_entered.connect(focus)

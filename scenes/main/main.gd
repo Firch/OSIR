@@ -4,7 +4,7 @@ extends Node2D
 
 
 func _ready():
-	pass # Replace with function body.
+	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

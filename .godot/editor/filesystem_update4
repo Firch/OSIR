@@ -1,10 +1,12 @@
 res://scenes/main/main.tscn
-res://sprites/ui/windows/default_style.tres
-res://sprites/ui/windows/default.tres
+res://sprites/ui/windows/default/button.tres
+res://sprites/ui/windows/default/description.tres
+res://sprites/ui/windows/default/nonmoveable.tres
+res://sprites/ui/windows/default/default.tres
 res://scenes/ui/desktop/desktop.tscn
 res://scenes/ui/windows/window.tscn
 res://scenes/ui/desktop/taskbarbutton.tscn
-res://scenes/ui/windows/window.gd
 res://scenes/ui/cursor/description.tscn
-res://sprites/ui/windows/default/default.tres
-res://sprites/ui/windows/default/nonmoveable.tres
+res://scenes/ui/cursor/cursor.tscn
+res://scenes/ui/windows/file.tscn
+res://scenes/ui/windows/folder.tscn

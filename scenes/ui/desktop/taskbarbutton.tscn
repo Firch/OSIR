@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default/default.tres" id="1_6n5ed"]
 [ext_resource type="Script" path="res://scenes/ui/desktop/taskbarbutton.gd" id="2_eeh7e"]
 
-[node name="TaskbarButton" type="Button" groups=["Clickables", "Description"]]
+[node name="TaskbarButton" type="Button" groups=["Clickables", "Hints"]]
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(22, 22)
 offset_right = 22.0

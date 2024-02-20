@@ -1,10 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6fx1t4j51a4t"]
+[gd_scene load_steps=4 format=3 uid="uid://c6fx1t4j51a4t"]
 
 [ext_resource type="Script" path="res://scenes/ui/cursor/cursor.gd" id="1_3ea6e"]
 [ext_resource type="Texture2D" uid="uid://dkh5ed7q87ppp" path="res://sprites/ui/cursor/cursor_default.png" id="2_5qtuj"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsnan"]
-size = Vector2(1, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6n44e"]
 animations = [{
@@ -17,12 +14,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Cursor" type="RigidBody2D"]
+[node name="Cursor" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_3ea6e")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_wsnan")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, 8)

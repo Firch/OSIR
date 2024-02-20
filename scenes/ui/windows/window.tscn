@@ -138,6 +138,7 @@ offset_left = 25.0
 offset_top = 5.0
 offset_right = 65.0
 offset_bottom = 16.0
+text = "Title"
 label_settings = SubResource("LabelSettings_8ihjk")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
