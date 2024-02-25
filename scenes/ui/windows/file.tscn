@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfhu0ymhnxxdu"]
+[gd_scene load_steps=5 format=3 uid="uid://bfhu0ymhnxxdu"]
 
+[ext_resource type="Script" path="res://scenes/ui/windows/file.gd" id="1_3ykm1"]
 [ext_resource type="Texture2D" uid="uid://tvlxeyomvmqk" path="res://sprites/ui/icons/madhead_big.png" id="1_p6tho"]
 [ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default/default.tres" id="2_pc550"]
 
@@ -13,6 +14,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 64.0
 offset_bottom = 64.0
+script = ExtResource("1_3ykm1")
 
 [node name="Button" type="Button" parent="." groups=["Clickables"]]
 self_modulate = Color(1, 1, 1, 0)
@@ -33,11 +35,12 @@ texture = ExtResource("1_p6tho")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2
-offset_top = 41.0
+offset_top = 40.0
 offset_right = 64.0
 offset_bottom = 64.0
 theme = ExtResource("2_pc550")
-text = "Filename.file"
+text = "ReallyFuckingLongFilename.file"
 label_settings = SubResource("LabelSettings_xlssn")
 horizontal_alignment = 1
 autowrap_mode = 1
+text_overrun_behavior = 3
