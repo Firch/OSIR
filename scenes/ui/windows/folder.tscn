@@ -1,27 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://mpy3d544at2n"]
+[gd_scene load_steps=3 format=3 uid="uid://mpy3d544at2n"]
 
 [ext_resource type="PackedScene" uid="uid://bjfo1x0lhgo1f" path="res://scenes/ui/windows/window.tscn" id="1_hjupr"]
+[ext_resource type="Texture2D" uid="uid://behmo6osfl1hj" path="res://sprites/ui/icons/madhead.png" id="2_jbccc"]
 
-[node name="Folder" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Window" instance=ExtResource("1_hjupr")]
+offset_right = 306.0
+offset_bottom = 172.0
+Text = "Folder"
+IconImage = ExtResource("2_jbccc")
 
-[node name="Window" parent="." instance=ExtResource("1_hjupr")]
-layout_mode = 0
-
-[node name="GridContainer" type="GridContainer" parent="Window"]
+[node name="GridContainer" type="GridContainer" parent="." index="9"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = 22.0
-offset_right = -3.0
-offset_bottom = -3.0
+offset_left = 5.0
+offset_top = 24.0
+offset_right = -5.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 5

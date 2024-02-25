@@ -1,10 +1,11 @@
-TextureRect
+CenterContainer
 Button
+Control
 Label
+TextureRect
 GridContainer
 CollisionShape2D
 Area2D
-Control
 Node2D
 StaticBody2D
 Panel

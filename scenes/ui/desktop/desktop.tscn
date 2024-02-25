@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cp1xs8cm2stub"]
+[gd_scene load_steps=9 format=3 uid="uid://cp1xs8cm2stub"]
 
 [ext_resource type="Texture2D" uid="uid://dxtem8ex4sldn" path="res://sprites/ui/wallpaper/placeholder1.png" id="1_j04yc"]
 [ext_resource type="Texture2D" uid="uid://detxfkh8h3qu4" path="res://sprites/ui/wallpaper/placeholder2.png" id="2_dod0f"]
 [ext_resource type="PackedScene" uid="uid://bjfo1x0lhgo1f" path="res://scenes/ui/windows/window.tscn" id="2_qelma"]
+[ext_resource type="PackedScene" uid="uid://mpy3d544at2n" path="res://scenes/ui/windows/folder.tscn" id="3_yoc53"]
 [ext_resource type="Texture2D" uid="uid://behmo6osfl1hj" path="res://sprites/ui/icons/madhead.png" id="4_4q4le"]
 [ext_resource type="PackedScene" uid="uid://c6fx1t4j51a4t" path="res://scenes/ui/cursor/cursor.tscn" id="5_4stej"]
 [ext_resource type="PackedScene" uid="uid://bst7augc6a6sk" path="res://scenes/ui/cursor/description.tscn" id="5_7rem8"]
@@ -44,6 +45,9 @@ offset_bottom = 270.0
 [node name="Windows" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+
+[node name="Folder" parent="Windows" instance=ExtResource("3_yoc53")]
+layout_mode = 1
 
 [node name="Taskbar" parent="Windows" instance=ExtResource("2_qelma")]
 layout_mode = 0
