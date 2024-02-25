@@ -5,9 +5,10 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_xlssn"]
 line_spacing = -3.0
+font_color = Color(0, 0, 0, 1)
 
 [node name="File" type="Control"]
-custom_minimum_size = Vector2(60, 64)
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 64.0
@@ -17,20 +18,22 @@ offset_bottom = 64.0
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 offset_left = 16.0
+offset_top = 16.0
 offset_right = 48.0
-offset_bottom = 32.0
+offset_bottom = 48.0
 
 [node name="Icon" type="TextureRect" parent="Button"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
+offset_top = -7.0
 offset_right = 32.0
-offset_bottom = 32.0
+offset_bottom = 25.0
 mouse_filter = 2
 texture = ExtResource("1_p6tho")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2
-offset_top = 32.0
+offset_top = 41.0
 offset_right = 64.0
 offset_bottom = 64.0
 theme = ExtResource("2_pc550")

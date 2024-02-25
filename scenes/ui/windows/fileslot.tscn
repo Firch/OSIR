@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://1qjhc1l7um6c"]
+
+[node name="Fileslot" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 64.0

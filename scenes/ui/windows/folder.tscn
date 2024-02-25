@@ -1,23 +1,70 @@
-[gd_scene load_steps=3 format=3 uid="uid://mpy3d544at2n"]
+[gd_scene load_steps=6 format=3 uid="uid://mpy3d544at2n"]
 
 [ext_resource type="PackedScene" uid="uid://bjfo1x0lhgo1f" path="res://scenes/ui/windows/window.tscn" id="1_hjupr"]
 [ext_resource type="Texture2D" uid="uid://behmo6osfl1hj" path="res://sprites/ui/icons/madhead.png" id="2_jbccc"]
+[ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default/default.tres" id="3_8yhx1"]
+[ext_resource type="PackedScene" uid="uid://1qjhc1l7um6c" path="res://scenes/ui/windows/fileslot.tscn" id="3_cllaj"]
+[ext_resource type="PackedScene" uid="uid://bfhu0ymhnxxdu" path="res://scenes/ui/windows/file.tscn" id="4_s80hd"]
 
 [node name="Window" instance=ExtResource("1_hjupr")]
-offset_right = 306.0
-offset_bottom = 172.0
+offset_right = 283.0
+offset_bottom = 168.0
 Text = "Folder"
 IconImage = ExtResource("2_jbccc")
 
-[node name="GridContainer" type="GridContainer" parent="." index="9"]
+[node name="Space" type="Panel" parent="." index="9"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
 offset_top = 24.0
 offset_right = -5.0
 offset_bottom = -5.0
+theme = ExtResource("3_8yhx1")
+theme_type_variation = &"Space"
+
+[node name="Grid" type="GridContainer" parent="Space" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 5
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = 3
+columns = 4
+
+[node name="Fileslot" parent="Space/Grid" index="0" instance=ExtResource("3_cllaj")]
+layout_mode = 2
+
+[node name="Fileslot2" parent="Space/Grid" index="1" instance=ExtResource("3_cllaj")]
+layout_mode = 2
+
+[node name="Fileslot3" parent="Space/Grid" index="2" instance=ExtResource("3_cllaj")]
+layout_mode = 2
+
+[node name="File" parent="Space/Grid/Fileslot3" index="0" instance=ExtResource("4_s80hd")]
+
+[node name="Fileslot4" parent="Space/Grid" index="3" instance=ExtResource("3_cllaj")]
+layout_mode = 2
+
+[node name="Fileslot5" parent="Space/Grid" index="4" instance=ExtResource("3_cllaj")]
+layout_mode = 2
+
+[node name="Fileslot6" parent="Space/Grid" index="5" instance=ExtResource("3_cllaj")]
+layout_mode = 2
+
+[node name="File" parent="Space/Grid/Fileslot6" index="0" instance=ExtResource("4_s80hd")]
+
+[node name="Fileslot7" parent="Space/Grid" index="6" instance=ExtResource("3_cllaj")]
+layout_mode = 2
+
+[node name="File" parent="Space/Grid/Fileslot7" index="0" instance=ExtResource("4_s80hd")]
+
+[node name="Fileslot8" parent="Space/Grid" index="7" instance=ExtResource("3_cllaj")]
+layout_mode = 2
