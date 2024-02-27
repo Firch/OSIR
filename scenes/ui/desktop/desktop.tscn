@@ -63,6 +63,10 @@ anchors_preset = 0
 [node name="Folder" parent="Windows" instance=ExtResource("3_yoc53")]
 material = SubResource("ShaderMaterial_jp6mj")
 layout_mode = 1
+offset_left = 331.0
+offset_top = 26.0
+offset_right = 614.0
+offset_bottom = 194.0
 
 [node name="Taskbar" parent="Windows" instance=ExtResource("2_qelma")]
 layout_mode = 0
@@ -98,6 +102,13 @@ offset_top = 54.0
 offset_right = 266.0
 offset_bottom = 270.0
 Text = "Window 2"
+
+[node name="Window3" parent="Windows" instance=ExtResource("3_yoc53")]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 282.0
+offset_right = 859.0
+offset_bottom = 450.0
 
 [node name="Description" parent="." instance=ExtResource("5_7rem8")]
 

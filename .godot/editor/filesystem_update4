@@ -13,3 +13,8 @@ res://scenes/ui/windows/folder.tscn
 res://scenes/ui/windows/file.tscn
 res://scenes/ui/windows/fileslot.tscn
 res://sprites/ui/windows/default/selection.tres
+res://scenes/ui/windows/window.gd
+res://scenes/ui/windows/fileghost.tscn
+res://scenes/ui/windows/fileghost.gd
+res://scenes/ui/cursor/cursor.tscn
+res://scenes/ui/cursor/cursor.gd

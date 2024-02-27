@@ -8,12 +8,13 @@
 line_spacing = -3.0
 font_color = Color(0, 0, 0, 1)
 
-[node name="File" type="Control"]
+[node name="File" type="Control" groups=["Files"]]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 64.0
 offset_bottom = 64.0
+mouse_filter = 2
 script = ExtResource("1_3ykm1")
 
 [node name="Selection" type="Panel" parent="."]
@@ -21,30 +22,35 @@ visible = false
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
+mouse_filter = 2
 theme = ExtResource("2_pc550")
 theme_type_variation = &"Selection"
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 61.0
-offset_bottom = 61.0
+offset_right = 64.0
+offset_bottom = 64.0
+focus_mode = 0
+mouse_filter = 1
 action_mode = 0
-
-[node name="Icon" type="TextureRect" parent="Button"]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 0
-offset_left = 13.0
-offset_top = 8.0
-offset_right = 45.0
-offset_bottom = 40.0
-mouse_filter = 2
-texture = ExtResource("1_p6tho")
 
 [node name="ClickTimer" type="Timer" parent="Button"]
 wait_time = 0.5
+
+[node name="CenterContainer" type="CenterContainer" parent="Button"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 52.0
+offset_bottom = 47.0
+
+[node name="Icon" type="TextureRect" parent="Button/CenterContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_p6tho")
+stretch_mode = 3
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2

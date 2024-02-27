@@ -2,7 +2,7 @@ extends Control
 
 
 func  _ready():
-	set_z_index(2)
+	set_z_index(3)
 
 
 func _input(event):

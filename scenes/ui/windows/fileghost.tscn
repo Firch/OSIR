@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx2yaxkwso7xk"]
+
+[ext_resource type="Texture2D" uid="uid://tvlxeyomvmqk" path="res://sprites/ui/icons/madhead_big.png" id="1_l66au"]
+[ext_resource type="Script" path="res://scenes/ui/windows/fileghost.gd" id="1_nayaw"]
+[ext_resource type="Theme" uid="uid://cnj16e05wr6kl" path="res://sprites/ui/windows/default/default.tres" id="2_m7auy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_81vs7"]
+line_spacing = -3.0
+font_color = Color(0, 0, 0, 1)
+
+[node name="Fileghost" type="Control"]
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_nayaw")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 7.0
+offset_right = 52.0
+offset_bottom = 47.0
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="CenterContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("1_l66au")
+stretch_mode = 3
+
+[node name="Title" type="Label" parent="."]
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 64.0
+theme = ExtResource("2_m7auy")
+text = "Filename.app"
+label_settings = SubResource("LabelSettings_81vs7")
+horizontal_alignment = 1
+autowrap_mode = 1
+text_overrun_behavior = 3

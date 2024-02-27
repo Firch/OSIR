@@ -1,9 +1,10 @@
+CenterContainer
+VScrollBar
 Window
 SubViewportContainer
 SubViewport
 Panel
 Timer
-CenterContainer
 Button
 Control
 Label
@@ -11,4 +12,3 @@ TextureRect
 GridContainer
 CollisionShape2D
 Area2D
-Node2D

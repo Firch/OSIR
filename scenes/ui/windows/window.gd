@@ -40,7 +40,7 @@ var minimized: bool = false # Is currently inchang MINIMIZED state?
 
 func _ready():
 	# Title:
-	if Title.text != null:
+	if Text != '':
 		Title.text = Text
 	
 	
