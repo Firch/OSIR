@@ -16,22 +16,35 @@ offset_right = 64.0
 offset_bottom = 64.0
 script = ExtResource("1_3ykm1")
 
-[node name="Button" type="Button" parent="." groups=["Clickables"]]
+[node name="Selection" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+theme = ExtResource("2_pc550")
+theme_type_variation = &"Selection"
+
+[node name="Button" type="Button" parent="."]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-offset_left = 16.0
-offset_top = 16.0
-offset_right = 48.0
-offset_bottom = 48.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 61.0
+offset_bottom = 61.0
+action_mode = 0
 
 [node name="Icon" type="TextureRect" parent="Button"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_top = -7.0
-offset_right = 32.0
-offset_bottom = 25.0
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 45.0
+offset_bottom = 40.0
 mouse_filter = 2
 texture = ExtResource("1_p6tho")
+
+[node name="ClickTimer" type="Timer" parent="Button"]
+wait_time = 0.5
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 2
@@ -39,7 +52,7 @@ offset_top = 40.0
 offset_right = 64.0
 offset_bottom = 64.0
 theme = ExtResource("2_pc550")
-text = "ReallyFuckingLongFilename.file"
+text = "Filename.app"
 label_settings = SubResource("LabelSettings_xlssn")
 horizontal_alignment = 1
 autowrap_mode = 1

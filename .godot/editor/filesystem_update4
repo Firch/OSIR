@@ -2,11 +2,14 @@ res://scenes/main/main.tscn
 res://sprites/ui/windows/default/button.tres
 res://sprites/ui/windows/default/description.tres
 res://sprites/ui/windows/default/nonmoveable.tres
+res://sprites/ui/windows/default/space.tres
 res://sprites/ui/windows/default/default.tres
+res://shaders/dropshadow.gdshader
+res://scenes/ui/windows/file.gd
 res://scenes/ui/desktop/desktop.tscn
 res://scenes/ui/windows/window.tscn
 res://scenes/ui/cursor/description.tscn
-res://scenes/ui/windows/file.tscn
 res://scenes/ui/windows/folder.tscn
+res://scenes/ui/windows/file.tscn
 res://scenes/ui/windows/fileslot.tscn
-res://sprites/ui/windows/default/space.tres
+res://sprites/ui/windows/default/selection.tres

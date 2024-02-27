@@ -1,4 +1,8 @@
+Window
+SubViewportContainer
+SubViewport
 Panel
+Timer
 CenterContainer
 Button
 Control
@@ -8,7 +12,3 @@ GridContainer
 CollisionShape2D
 Area2D
 Node2D
-StaticBody2D
-NinePatchRect
-Container
-BoxContainer
